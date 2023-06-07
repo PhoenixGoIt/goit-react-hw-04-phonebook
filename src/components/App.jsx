@@ -29,7 +29,8 @@ export function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    setName('');
+    setNumber('');
     const newContact = {
       id: nanoid(),
       name,
@@ -60,10 +61,10 @@ export function App() {
     <div>
       <h1>Phonebook</h1>
       <form onSubmit={handleSubmit}>
-        <InFormName title="Name" />
-        <NameInput onChange={handleChangeName} />
+        <InFormName  title="Name" />
+        <NameInput value={name} onChange={handleChangeName} />
         <InFormName title="Number" />
-        <NumberInput onChange={handleChangeNumber} />
+        <NumberInput value={number} onChange={handleChangeNumber} />
         <AddBtn />
       </form>
       <h2>Contacts</h2>

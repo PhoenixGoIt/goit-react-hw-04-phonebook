@@ -1,6 +1,7 @@
-export const NameInput = ({onChange}) => {
+export const NameInput = ({onChange, value}) => {
     return(
         <input
+        value={value}
         onChange={(e) => onChange(e.currentTarget.value)}
         type="text"
         name="name"

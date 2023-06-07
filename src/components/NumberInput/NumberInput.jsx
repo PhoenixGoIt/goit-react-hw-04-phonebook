@@ -1,6 +1,7 @@
-export const NumberInput = ({onChange}) => {
+export const NumberInput = ({onChange, value}) => {
     return(
         <input
+        value={value}
         onChange={(e) => onChange(e.currentTarget.value)}
         type="tel"
         name="number"
