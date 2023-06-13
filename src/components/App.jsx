@@ -37,8 +37,12 @@ export function App() {
       number,
     };
 
-    if (contacts.filter((contact) => contact.number.trim() === newContact.number.trim()).length) {
-      alert(`${newContact.number}: is already in contacts`);
+    if (contacts.filter((contact) => contact.name.toLowerCase().trim() === newContact.name.toLowerCase().trim()).length) {
+      alert(`${newContact.name} is already in contacts`);
+      return;
+    }
+    else if(contacts.filter((contact) => contact.number.trim() === newContact.number.trim()).length) {
+      alert(`${newContact.number} is already in contacts`);
       return;
     }
 
